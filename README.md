@@ -135,6 +135,8 @@ pip install pytest
 python -m pytest -q
 ```
 
+Tested on Python 3.10, 3.11, 3.12 and 3.13 (160 tests pass on each).
+
 Expected result: `160 passed` (a deprecation warning from a locally installed pytest plugin may also appear).
 
 ## Assumptions and limits
