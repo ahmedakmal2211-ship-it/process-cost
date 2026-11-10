@@ -1,0 +1,39 @@
+{
+  "name": "6061 plate pocket, 16 mm 3-flute carbide end mill (illustrative numbers)",
+  "description": "Invented part. Cut length is the engaged toolpath length per depth pass, computed by the user (e.g. from CAM). Money values are illustrative only.",
+  "batch_size": 40,
+  "scenarios": [
+    {
+      "name": "In-house VMC",
+      "operation": {
+        "type": "milling",
+        "material": "al_6061",
+        "tool_material": "coated_carbide",
+        "tool_diameter_mm": 16,
+        "teeth": 3,
+        "feed_mm_per_tooth": 0.15,
+        "cut_length_mm": 1800,
+        "total_depth_mm": 12,
+        "ap_mm": 4,
+        "ae_mm": 8,
+        "lead_in_out_mm": 20,
+        "spindle_max_rpm": 8000,
+        "feed_max_mm_per_min": 5000
+      },
+      "costs": {
+        "machine_rate_per_h": 85,
+        "setup_min": 90,
+        "handling_min": 1.5,
+        "tool_change_min": 3.0,
+        "cost_per_edge": 40.0,
+        "material_cost_per_part": 12.00
+      }
+    },
+    {
+      "name": "Outsource quote",
+      "type": "outsource",
+      "price_per_part": 21.50,
+      "fixed_fee": 25.00
+    }
+  ]
+}

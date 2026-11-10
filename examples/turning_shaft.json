@@ -1,0 +1,48 @@
+{
+  "name": "Turned shaft, 40 -> 36 mm OD x 120 mm, AISI 1045 (illustrative numbers)",
+  "description": "Invented textbook-style part. Money values are illustrative only.",
+  "batch_size": 50,
+  "operation": {
+    "type": "turning",
+    "material": "aisi_1045",
+    "tool_material": "coated_carbide",
+    "D0_mm": 40,
+    "D1_mm": 36,
+    "length_mm": 120,
+    "ap_mm": 1.0,
+    "approach_mm": 2.0
+  },
+  "costs": {
+    "cost_per_edge": 4.50,
+    "material_cost_per_part": 6.00
+  },
+  "scenarios": [
+    {
+      "name": "CNC lathe",
+      "operation": {
+        "feed_mm_per_rev": 0.25,
+        "spindle_max_rpm": 4000
+      },
+      "costs": {
+        "machine_rate_per_h": 95,
+        "setup_min": 90,
+        "handling_min": 1.0,
+        "tool_change_min": 1.0
+      }
+    },
+    {
+      "name": "Manual lathe",
+      "operation": {
+        "Vc_m_per_min": 120,
+        "feed_mm_per_rev": 0.20,
+        "spindle_max_rpm": 2000
+      },
+      "costs": {
+        "machine_rate_per_h": 65,
+        "setup_min": 20,
+        "handling_min": 2.5,
+        "tool_change_min": 2.0
+      }
+    }
+  ]
+}

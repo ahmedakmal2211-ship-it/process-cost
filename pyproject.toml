@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "process-cost"
+version = "0.1.0"
+description = "Turning and milling cycle time, cost per part, break-even batch size and sensitivity from speeds, feeds and Taylor tool life (standard library only)."
+license = "MIT"
+authors = [{ name = "Akmal Azeem" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+process-cost = "process_cost.cli:main"
+
+[tool.setuptools]
+packages = ["process_cost"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
