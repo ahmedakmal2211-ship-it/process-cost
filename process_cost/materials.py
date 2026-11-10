@@ -1,7 +1,7 @@
 """Indicative cutting data for common work materials and tool materials.
 
 INDICATIVE STARTING ASSUMPTIONS ONLY. These numbers are textbook-order values
-chosen to sit inside the ranges published in general references (Kalpakjian &
+chosen to be broadly consistent with ranges quoted for general references (Kalpakjian &
 Schmid, "Manufacturing Engineering and Technology"; Groover, "Fundamentals of
 Modern Manufacturing"; Machinery's Handbook speed and feed tables; public
 Sandvik Coromant / Kennametal catalogue ranges). They are NOT machining data

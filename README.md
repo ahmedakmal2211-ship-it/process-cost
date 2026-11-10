@@ -139,7 +139,7 @@ Expected result: `160 passed` (a deprecation warning from a locally installed py
 
 ## Assumptions and limits
 
-- The materials table holds indicative, textbook-order data. It is not a machining data sheet.
+- The materials table holds indicative, textbook-order data. It is not a machining data sheet. It was sanity-checked against public secondary sources, not against the textbooks page by page (see `docs/MODEL.md`, "Cross-check status").
 - Real tool life must be checked with the tool maker and by shop trials before you rely on any number.
 - Turning uses the mean diameter Dm = (D0 + D1)/2 for every pass. Constant surface speed is not modelled.
 - Taylor tool life depends on speed only. Feed and depth of cut do not change tool life.

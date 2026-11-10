@@ -143,7 +143,8 @@ naming the field. Optional fields with defaults: `approach_mm` (2.0 mm, noted), 
 ## 8. Data sources (indicative)
 
 The materials table (`process_cost/materials.py`, `process-cost materials`) holds **indicative,
-textbook-order starting assumptions**, chosen to sit inside the ranges given in general public references:
+textbook-order starting assumptions**, chosen to be broadly consistent with the ranges quoted for these
+general public references (the books themselves were not checked page by page; see "Cross-check status"):
 
 - S. Kalpakjian and S. R. Schmid, *Manufacturing Engineering and Technology* (Taylor n ranges by tool
   material; typical speed ranges).
@@ -162,6 +163,24 @@ Values used: HSS n = 0.125 (T_ref 30 min), uncoated carbide n = 0.25 and coated 
 (T_ref 15 min). Coated-carbide turning speeds: AISI 1018 220, AISI 1045 185, 304 130, 6061 450,
 grey cast iron 150, free-cutting brass 260, Ti-6Al-4V 65 m/min; uncoated carbide and HSS are lower
 (HSS about 21-29% of coated carbide). Milling speeds are listed separately.
+
+### Cross-check status (2026-11-11)
+
+The table was sanity-checked against public secondary sources (university course slides, vendor
+cutting-speed tables, published machinability summaries). The textbooks above were not available for
+page-level checking, so none of these values is a verified quotation from them.
+
+- Taylor n: HSS 0.125 and uncoated carbide 0.25 sit inside the commonly quoted ranges (HSS 0.08-0.20,
+  carbide about 0.2-0.5). Coated carbide is often quoted higher (about 0.4-0.6); the 0.30 used here is a
+  deliberately conservative value, at the low end, and users can override `taylor_n` and `taylor_C`.
+- Turning speeds: the recommended speeds are at or below the middle of published ranges, for example
+  AISI 1045 at 185 m/min versus vendor figures of roughly 240-330 m/min under ideal conditions; 304 at
+  105-130 m/min versus about 75-120; Ti-6Al-4V at 45-65 versus about 35-90 m/min.
+- Aluminium: 6061 carbide speeds (350-450 m/min) are inside the wide range quoted for wrought aluminium
+  (about 200-600 m/min depending on tool and coating). Coatings such as TiAlN are often advised against
+  for aluminium, so treat the "coated carbide" row for 6061 as a generic fast carbide.
+- Grey cast iron and free-cutting brass: published figures vary widely and mix units (m/min and ft/min);
+  the values here are mid-range and should be treated as rough.
 
 ## 9. Limits
 
